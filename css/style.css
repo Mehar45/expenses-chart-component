@@ -1,0 +1,94 @@
+:root {
+  --primary-red: hsl(10, 79%, 65%);
+  --secondary-dark-brown: hsl(25, 47%, 15%);
+  --secondary-medium-brown: hsl(28, 10%, 53%);
+  --secondary-cream: hsl(27, 66%, 92%);
+  --secondary-pale-orange: hsl(33, 100%, 98%);
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--secondary-cream);
+  font-size: 18px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--primary-red);
+  color: var(--secondary-pale-orange);
+  width: 500px;
+}
+header .balance div {
+  padding-top: 0.25rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+main {
+  background-color: var(--secondary-pale-orange);
+  padding: 2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+main h2 {
+  margin-bottom: 2rem;
+}
+
+.total {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-pale-orange);
+  padding: 2rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.total::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: auto;
+  border: 1px solid var(--secondary-cream);
+}
+.total span {
+  color: var(--secondary-medium-brown);
+}
+.total .total__price {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.total__last-month {
+  transform: translateY(10px);
+}
+.total .total__last-month div {
+  font-weight: 700;
+  text-align: end;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    width: auto;
+  }
+}

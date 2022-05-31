@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assests/images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="balance">
+          <span>My balance</span>
+          <div>$921.48</div>
+        </div>
+        <div class="logo">
+          <img src="./assests/images/logo.svg" alt="logo" />
+        </div>
+      </header>
+      <main>
+        <h2>Spending - Last 7 days</h2>
+        <div class="chart-list">
+          <canvas id="myChart"></canvas>
+        </div>
+      </main>
+      <div class="total">
+        <div class="total__this-month">
+          <span>Total this month</span>
+          <div class="total__price">$478.33</div>
+        </div>
+        <div class="total__last-month">
+          <div>+2.4%</div>
+          <span>from last month</span>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://webdevsafi.netlify.app/" target="_blank">Safi Ullah</a
+        >.
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <script src="./assests/fetch.js"></script>
+  </body>
+</html>
